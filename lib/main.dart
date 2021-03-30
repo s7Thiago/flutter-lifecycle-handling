@@ -24,6 +24,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   Timer timer;
   int count = 0;
+  bool isActive = true;
 
   @override
   void initState() {
@@ -32,9 +33,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     WidgetsBinding.instance.addObserver(this);
 
     timer = Timer.periodic(Duration(seconds: 1), (timer) {
-      setState(() {
-        count++;
-      });
+      if (isActive) {
+        setState(() {
+          count++;
+        });
+      }
     });
   }
 
@@ -53,12 +56,14 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     switch (state) {
       case AppLifecycleState.resumed:
         print('resumed');
+        isActive = true;
         break;
       case AppLifecycleState.inactive:
         print('inactive');
         break;
       case AppLifecycleState.paused:
         print('paused');
+        isActive = false;
         break;
       case AppLifecycleState.detached:
         print('detached');

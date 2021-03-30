@@ -9,7 +9,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.light(),
-      home: HomeScreen(),
+      home: Scaffold(
+        body: HomeScreen(),
+      ),
     );
   }
 }
@@ -34,11 +36,23 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    timer.cancel();
+    print("DISPOSE: called");
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
       color: Colors.amber,
-      child: Text(count.toString()),
+      child: Text(
+        count.toString(),
+        style: Theme.of(context).textTheme.headline1.copyWith(
+              color: Colors.white,
+            ),
+      ),
     );
   }
 }

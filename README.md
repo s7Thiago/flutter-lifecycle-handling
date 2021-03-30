@@ -6,6 +6,8 @@ A few resources to get you started if this is your first Flutter project:
 
 - the app contains a Timer that automatically increments a text on the UI
 - The Timer pauses when the application is minimized
+- The timer continues when the application is resumed
+- The application state go to inactive when in screen divide mode
 
 ## App Life Cycle States
 

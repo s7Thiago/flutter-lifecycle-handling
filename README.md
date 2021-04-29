@@ -48,3 +48,7 @@ A few resources to get you started if this is your first Flutter project:
 > ___
 > 
 > The three main states are resumed, paused and inactive
+
+## Project demo:
+
+![](assets/app.gif)

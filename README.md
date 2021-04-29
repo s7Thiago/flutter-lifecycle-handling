@@ -12,39 +12,43 @@ A few resources to get you started if this is your first Flutter project:
 ## App Life Cycle States
 
 > ### **resumed**
->
->> - Visible in foreground
->> - Responding to user
->
+> 
+> > - Visible in foreground
+> > - Responding to user
+> 
 > ___
->
+> 
 > ### **paused**
->
+> 
 > the application is minimized.
->
->> - Not visible
->> - No response
->> - Background
->
+> 
+> > - Not visible
+> > - No response
+> > - Background
+> 
 > ___
->
+> 
 > ### **inactive**
->
+> 
 > the application is visible but not responding to user interactions.
->
->> - Visible in foreground
->> - No response
->
+> 
+> > - Visible in foreground
+> > - No response
+> 
 > ___
->
+> 
 > ### **detached**
->
+> 
 > the app screen is not visible to user because is being created/destroyed
->
->> - Not visible
->> - Not visible
->> - Being created/destroyed
->
+> 
+> > - Not visible
+> > - Not visible
+> > - Being created/destroyed
+> 
 > ___
+> 
 > The three main states are resumed, paused and inactive
->
+
+## Project demo:
+
+![](assets/app.gif)
